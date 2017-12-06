@@ -1,4 +1,4 @@
 # JumpingWindow
 
-■実行ファイル　　
+■実行ファイル  
 JumpimgWindow　→　bin　→　Debug　→　JumpingWindow.exe
