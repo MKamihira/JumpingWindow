@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 namespace JumpingWindow
@@ -16,6 +17,17 @@ namespace JumpingWindow
             ScriptScope builtin = engineMain.GetBuiltinModule();
             builtin.SetVariable("window", this);
             engineMain.ExecuteFile("jumping.py");
+        }
+
+        private void Quit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            DragMove();
         }
     }
 }
